@@ -1,7 +1,6 @@
 import { useState, createContext, useEffect } from 'react';
 import Pokedex from './Components/pokedex';
 
-
 export const Pokecounter = createContext();
 
 
@@ -9,7 +8,7 @@ function App() {
 
 
 
-  const [dataS, setSData] = useState([]);
+  const [dataS, setDatas] = useState([]);
   const [numPok, setNumPok]= useState(0);
 
 
@@ -40,7 +39,7 @@ async function loadPokedex() {
         
         if (data) {
             
-            setSData(prevDataS=>[...prevDataS, data]);
+            setDatas(prevDataS=>[...prevDataS, data]);
         }
     }
  
@@ -50,12 +49,23 @@ async function loadPokedex() {
   
 loadPokedex();
 
-}, []);
 
+
+}, []);
+console.log(dataS)
 
   function changeNumPok () {
 
-    setNumPok(prevNumPok => prevNumPok+1);
+
+    if(numPok<=20){
+        setNumPok(prevNumPok => prevNumPok + 2);
+
+    console.log(numPok)
+
+    }else{
+         setNumPok(0)
+    }
+   
   }
 
 
