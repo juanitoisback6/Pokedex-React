@@ -32,33 +32,38 @@ function App() {
 
 async function loadPokedex() {
 
-   
+   let array = [];
+
     for (let i = 1; i <= 20; i++) {
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         const data = await getData(url);
         
+        
         if (data) {
             
-            setDatas(prevDataS=>[...prevDataS, data]);
+             array=[...array,data];
+             
         }
+        
     }
- 
+ setDatas(array);
 }
 
  useEffect(() => {
   
-loadPokedex();
+    loadPokedex();
 
+            }, 
+                []);
 
-
-}, []);
 console.log(dataS)
 
   function changeNumPok () {
 
 
     if(numPok<=20){
-        setNumPok(prevNumPok => prevNumPok + 2);
+ 
+        setNumPok(prevNumPok => prevNumPok + 1);
 
     console.log(numPok)
 
