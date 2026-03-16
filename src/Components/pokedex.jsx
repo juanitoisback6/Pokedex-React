@@ -8,9 +8,13 @@ const {changeNumPok}=useContext(Pokecounter);
 
 return(
 <>
+
+<div className="hidden">
 <h2>{props.name}</h2>
 
 <button onClick={changeNumPok} >Next</button>
+</div>
+
 </>
 )
 

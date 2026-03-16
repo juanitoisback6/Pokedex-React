@@ -1,0 +1,53 @@
+*{
+          margin: 0;
+          box-sizing: border-box;
+}
+
+body{
+          background-color: black;
+          color: white;
+}
+
+section{
+          display: flex;
+          flex-direction: column;
+           
+          align-items: center;
+}
+
+.title{
+        width: 40vw;
+          height: auto;
+          margin: 20px 0 0 0; 
+}
+
+@keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-15px); }
+}
+
+.clickHere{
+           width:25vw;
+          height: auto;
+          margin: 20px 0 0 170px;
+          animation: float 2s ease-in-out infinite; 
+}
+
+.closedPokedex{
+          width: 30vw;
+          height: auto;
+          margin: 0 0 0 100px;
+          animation: floatX 4s ease-in-out infinite;  
+}
+
+@keyframes floatX {
+          0%, 90%, 100% { transform: translateX(0); }
+          92% { transform: translateX(-2px); }
+          94% { transform: translateX(2px); }
+          96% { transform: translateX(-2px); }
+          98% { transform: translateX(2px); }
+}
+
+.hidden{
+display: none;
+}
