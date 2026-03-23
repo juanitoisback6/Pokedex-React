@@ -1,20 +1,21 @@
 
-import imagenTitulo from '../assets/PokedexTitleSVG.svg';
 import clickHere from '../assets/ClickHereSVG.svg';
 import closedPokedex from  '../assets/closedPokedex.svg'; 
+import {useContext} from "react";
+import { Pokecounter } from '../App';
 
 
 
 export default function PokeClickHere () {
 
+  const {clicked, setClicket, chageHidde} = useContext(Pokecounter);
+ 
+ 
+
 return(
 <>
- <section>
-   <img 
-   className='title'        
-   draggable="false" 
-   src={imagenTitulo} 
-   alt="Pokédex title" />
+ <section className={ clicked && "hidden"}>
+   
 
      <img 
      className='clickHere'
@@ -25,7 +26,8 @@ return(
      className='closedPokedex'
      draggable="false" 
      src={closedPokedex} 
-     alt="Closed pokédex" />
+     alt="Closed pokédex"
+     onClick={chageHidde} />
 
  </section>
 </>
