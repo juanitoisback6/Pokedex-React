@@ -14,7 +14,7 @@ export default function PokeClickHere () {
 
 return(
 <>
- <section className={ clicked && "hidden"}>
+ <section className={   clicked && "hidden" }>
    
 
      <img 

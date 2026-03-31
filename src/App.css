@@ -13,13 +13,14 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #000;
 }
 
 /* Pokedex Animation */
 
 
   
- 
+
 
 .animsection {
 	 display: flex;
@@ -1178,7 +1179,7 @@ width: 20px;
 #bg-curve1-right {
 	width: 350px;
 	height: 80px;
-	background-color: #fff;
+	background-color: #000000;
 
 	border-top-right-radius: 30px;
 	 
@@ -1188,7 +1189,7 @@ width: 20px;
 	width: 350px;
 	height: 420px;
 	background-color: #c00d0d;
-
+	
 	border-bottom-right-radius: 30px;
    
 
@@ -1213,7 +1214,7 @@ width: 20px;
 #curve2-right {
 	width: 216px;
 	height: 100px;
-	background-color: #fff;
+	background-color: #050505;
 	float: left;
 
 	position: absolute;
@@ -1230,12 +1231,24 @@ width: 20px;
 
 @media (max-width: 800px) {
     body {
+ 	display: flex;
         flex-direction: column;
         height: auto;
         min-height: 100vh;
-        padding: 20px 0;
+         
         overflow-x: hidden;
     }
+
+    .title{
+	margin-top:  0px;
+    }
+
+.closedPokedex{
+          width: 70vw;
+          height: auto;
+          animation: floatX 4s ease-in-out infinite;  
+}
+    
     
     #pokedex {
         display: none;   
@@ -1248,6 +1261,18 @@ width: 20px;
 
  
 @media (max-width: 420px) {
+
+body{
+	    justify-content: center;
+        align-items: center;
+}
+
+.closedPokedex{
+          width: 90vw;
+          height: auto;
+          animation: floatX 4s ease-in-out infinite;  
+}
+
     #left, #right {
         transform: scale(0.8);
         transform-origin: top center;

@@ -51,7 +51,10 @@ setClicket(true);
         return data;
 
     } catch (error) {
-        console.error(error);
+
+      console.error(error);
+     
+        
     }
 }
 
@@ -64,8 +67,8 @@ async function loadInputPrincipal(pokemon) {
  let array=[];
         const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
         const data = await getData(url);
-       
-       
+        
+
         if (data) {
            
              array=[data];

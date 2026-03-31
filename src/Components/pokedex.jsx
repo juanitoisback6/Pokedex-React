@@ -86,7 +86,19 @@ return(
 
            {/* Formulario de Búsqueda */}
             <form className="form" id="search">
-                <input type="search" className="input-search" placeholder="Search" required onChange={(e)=>setSearchInput(e.target.value)} />
+                <input type="search" className="input-search" placeholder="Search" required onChange={(e)=>{ 
+                    
+                    let value= e.target.value; 
+
+                    if(value.trim() === "" ){
+                        setSearchInput(undefined)
+                        console.log("f")
+
+                    }else{
+                    setSearchInput(value.trim());
+                    }}
+
+                    } />
             </form>
 
 
